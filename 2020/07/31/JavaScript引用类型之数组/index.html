@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, AM_HA的博客">
+    <meta name="keywords" content="JavaScript引用类型之数组, AM_HA的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | AM_HA的博客</title>
+    <title>JavaScript引用类型之数组 | AM_HA的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">JavaScript引用类型之数组</h1>
                 </div>
             </div>
         </div>
@@ -428,12 +428,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Js/">
+                                <span class="chip bg-color">Js</span>
+                            </a>
+                        
+                            <a href="/tags/Array/">
+                                <span class="chip bg-color">Array</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/" class="post-category">
+                                学习随笔
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -442,28 +459,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-29
+                    2020-07-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-29
+                    2020-07-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    764
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -478,15 +495,96 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="JavaScript-数组"><a href="#JavaScript-数组" class="headerlink" title="JavaScript 数组"></a>JavaScript 数组</h1><blockquote>
+<p><a href="https://hdtmk8.github.io/">hdtmk8.github.io</a>  @hdtmk8  </p>
+</blockquote>
+<p>数组是多个变量值的集合，数组是<code>Array</code>对象的实例，所以可以像对象一样调用方法。 </p>
+<h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><hr>
+<p>使用对象方式创建数组：</p>
+<pre class=" language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">"hexo"</span><span class="token punctuation">,</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//[1,2,3,"hexo","hdtmk8"]</span></code></pre>
+<p>使用字面量创建是推荐的简单作法:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"hdcms"</span><span class="token punctuation">,</span> <span class="token string">"houdunren"</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<p>多维数组定义:</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">"hexo"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">"hdtmk8"</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p> 数组是引用类型可以使用<code>const</code>声明并修改它的值 :</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"hexo"</span><span class="token punctuation">,</span> <span class="token string">"hdtmk8"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+array<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//["hexo", "hdtmk8","js"]</span></code></pre>
+<p> 使用原型的 <code>length</code>属性可以获取数组元素数量 </p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"hexo"</span><span class="token punctuation">,</span> <span class="token string">"hdtmk8"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//2</span></code></pre>
+<p> 数组可以设置任何值，下面是使用索引添加数组 :</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"hdtmk8"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+hd<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"js"</span><span class="token punctuation">;</span></code></pre>
+<p>下面直接设置3号数组，会将1/2索引的数组定义为空值</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"hdtmk8"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+hd<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"js"</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//4</span></code></pre>
+<p> 声明多个空元素的数组 :</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//3</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//[empty × 3]</span></code></pre>
+<h4 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of"></a>Array.of</h4><p> 使用<code>Array.of</code> 与 <code>new Array</code> 不同是设置一个参数时不会创建空元素数组 :</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token keyword">of</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//[3]</span>
+
+hd <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token keyword">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//[1, 2, 3] </span></code></pre>
+<h4 id="类型检测"><a href="#类型检测" class="headerlink" title="类型检测"></a>类型检测</h4><p> 检测变量是否为数组类型 :</p>
+<pre class=" language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"hexo"</span><span class="token punctuation">,</span> <span class="token string">"hdtmk8"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false </span></code></pre>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><hr>
+<p>可以将数组转换为字符串也可以将其他类型转换为数组</p>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>大部分数据类型都可以使用<code>.toString()</code>函数转换为字符串：</p>
+<pre class=" language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1,2,3</span></code></pre>
+<p>也可以使用函数<code>String</code>转换为字符串：</p>
+<pre class=" language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1,2,3</span></code></pre>
+<p>或使用<code>join</code>连接为字符串：</p>
+<pre class=" language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">"-"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//1-2-3</span></code></pre>
+<h4 id="Array-from"><a href="#Array-from" class="headerlink" title="Array.from"></a>Array.from</h4><p>使用Array.from可以将类数组转换为数组，类数组指包含<code>length</code>属性或可迭代的对象。</p>
+<ul>
+<li><p>第一个参数为要转换的数据，第二个参数为类似于<code>map</code>函数的回调方法：  </p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> str<span class="token operator">=</span><span class="token string">"hdtmk8"</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">loge</span><span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//["h","d","t","m","k","8"]</span></code></pre>
+</li>
+</ul>
+<p>为对象设置<code>length</code>属性后也可以转换为数组，但下标要为数值或数值字符串：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> user<span class="token operator">=</span><span class="token punctuation">{</span>
+
+<span class="token number">0</span><span class="token punctuation">:</span><span class="token string">"array"</span><span class="token punctuation">,</span>
+
+<span class="token string">"1"</span><span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">,</span>
+
+length<span class="token punctuation">:</span><span class="token number">2</span>  <span class="token comment" spellcheck="true">//必须设置</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//["array",18]</span></code></pre>
+<h3 id="展开语法"><a href="#展开语法" class="headerlink" title="展开语法"></a>展开语法</h3><hr>
+<h4 id="数组合并"><a href="#数组合并" class="headerlink" title="数组合并"></a>数组合并</h4><p>使用展开语法来合并数组相比<code>concat</code>要更简单，使用<code>...</code>可将数组展开为多个值：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> b<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"hdtmk8"</span><span class="token punctuation">,</span><span class="token operator">...</span>a<span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">logt</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//["a","hdtmk8",1,2,3] 把a数组的元素全部都添加到b数组元素的后面</span></code></pre>
+<h4 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h4><p>使用展开语法可以替代<code>arguments</code>来接收任意数量的参数：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">hd</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">hd</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//[1,2,3,"hdtmk8"]</span></code></pre>
+<p>也可以用于接收部分参数：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">hd</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">hd</span><span class="token punctuation">(</span><span class="token string">"Alex"</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Alex (4)[1,2,3,"hdtmk8"]</span></code></pre>
+<h3 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h3><hr>
+<p>解构是一种更简洁的赋值特性，可以理解为分解一个数据的结构。</p>
+<ul>
+<li>建议使用let/const声明</li>
+</ul>
+<h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p>基本使用语法：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//数组使用</span>
+<span class="token keyword">let</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span>url<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"hdtmk8"</span><span class="token punctuation">,</span><span class="token string">"hdtmk8.github.io"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//hdtmk8</span></code></pre>
 
             </div>
             <hr/>
@@ -512,7 +610,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://hdtmk8.github.io/2020/07/29/hello-world/">http://hdtmk8.github.io/2020/07/29/hello-world/</a>
+                    <a href="http://hdtmk8.github.io/2020/07/31/JavaScript%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B9%8B%E6%95%B0%E7%BB%84/">http://hdtmk8.github.io/2020/07/31/JavaScript%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B9%8B%E6%95%B0%E7%BB%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -549,7 +647,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Js/">
+                                    <span class="chip bg-color">Js</span>
+                                </a>
+                            
+                                <a href="/tags/Array/">
+                                    <span class="chip bg-color">Array</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -761,46 +867,58 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/07/30/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
+                <a href="/2020/07/31/JavaScript%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B9%8B%E6%95%B0%E7%BB%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="你好世界">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="JavaScript引用类型之数组">
                         
-                        <span class="card-title">你好世界</span>
+                        <span class="card-title">JavaScript引用类型之数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            JavaScript 数组
+hdtmk8.github.io  @hdtmk8  
+
+数组是多个变量值的集合，数组是Array对象的实例，所以可以像对象一样调用方法。 
+创建数组
+使用对象方式创建数组：
+console.log(new Ar
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/blog/" class="post-category">
-                                    blog
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    学习随笔
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/Js/">
+                        <span class="chip bg-color">Js</span>
+                    </a>
+                    
+                    <a href="/tags/Array/">
+                        <span class="chip bg-color">Array</span>
                     </a>
                     
                 </div>
@@ -814,34 +932,56 @@
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/29/hello-world/">
+                <a href="/2020/07/31/JavaScript%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B9%8B%E6%95%B0%E7%BB%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="JavaScript引用类型之数组">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">JavaScript引用类型之数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            JavaScript 数组
+hdtmk8.github.io  @hdtmk8  
+
+数组是多个变量值的集合，数组是Array对象的实例，所以可以像对象一样调用方法。 
+创建数组
+使用对象方式创建数组：
+console.log(new Ar
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-31
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            AM_HA
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    学习随笔
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Js/">
+                        <span class="chip bg-color">Js</span>
+                    </a>
+                    
+                    <a href="/tags/Array/">
+                        <span class="chip bg-color">Array</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1045,7 +1185,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">148</span>&nbsp;字
+                class="white-color">764</span>&nbsp;字
             
             
             
@@ -1113,7 +1253,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/hudingtao99/hudingtao99.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/hdtmk8/hdtmk8.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
