@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript数据类型之Symbol类型, AM_HA的博客">
+    <meta name="keywords" content="JavaScript 宏任务与微任务, AM_HA的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaScript数据类型之Symbol类型 | AM_HA的博客</title>
+    <title>JavaScript 宏任务与微任务 | AM_HA的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript数据类型之Symbol类型</h1>
+                    <h1 class="description center-align post-title">JavaScript 宏任务与微任务</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,12 @@
                                 <span class="chip bg-color">Js</span>
                             </a>
                         
-                            <a href="/tags/Symbol/">
-                                <span class="chip bg-color">Symbol</span>
+                            <a href="/tags/%E5%AE%8F%E4%BB%BB%E5%8A%A1/">
+                                <span class="chip bg-color">宏任务</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%BE%AE%E4%BB%BB%E5%8A%A1/">
+                                <span class="chip bg-color">微任务</span>
                             </a>
                         
                     </div>
@@ -459,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-01
+                    2020-08-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-01
+                    2020-08-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    691
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -495,123 +499,218 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h1><blockquote>
-<p><a href="https://hdtmk8.github.io/">hdtmk8</a> @hdtmk8</p>
+                <h1 id="JavaScript-宏任务与微任务"><a href="#JavaScript-宏任务与微任务" class="headerlink" title="JavaScript 宏任务与微任务"></a>JavaScript 宏任务与微任务</h1><hr>
+<blockquote>
+<p><a href="https://hdttmk.github.io/" target="_blank" rel="noopener">hdttmk8</a>@hdttmk8</p>
 </blockquote>
-<p>Symbol用于防止属性名冲突而产生的，比如向第三方对象中添加属性时。</p>
-<p>Symbol的值是唯一的，独一无二的不会重复的,可以把它想象成一个独一无二的特殊字符串。</p>
-<h3 id="基础知识："><a href="#基础知识：" class="headerlink" title="基础知识："></a>基础知识：</h3><hr>
-<h4 id="Symbol-1"><a href="#Symbol-1" class="headerlink" title="Symbol:"></a>Symbol:</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> edu<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//symbol</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd <span class="token operator">==</span> edu<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span></code></pre>
-<p>Symbol不可以添加属性：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-hd<span class="token punctuation">.</span>name<span class="token operator">=</span><span class="token string">"hdtmk8"</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h4 id="描述参数"><a href="#描述参数" class="headerlink" title="描述参数"></a>描述参数</h4><p>可传入字符串用于描述Symbol,方便在控制台分辨Symbol:</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"is name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> edu<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"测试功能"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Symbol(is name);</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>edu<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//Symbol(这是一个测试)</span></code></pre>
-<p>传入相同参数Symbol也是独立唯一的，因为参数只是描述而已，但使用<code>symbol.for</code>则不会：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> edu<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd <span class="token operator">==</span> edu<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span></code></pre>
-<p>使用<code>description</code>可以获取传入的描述参数：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd<span class="token punctuation">.</span>description<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//hdtmk8</span></code></pre>
-<h4 id="Symbol-for"><a href="#Symbol-for" class="headerlink" title="Symbol.for"></a>Symbol.for</h4><p>根据描述获取Symbol，如果不存在则新建一个Symbol</p>
+<h2 id="任务管理"><a href="#任务管理" class="headerlink" title="任务管理"></a>任务管理</h2><hr>
+<p>JavaScript 语言的一大特点就是单线程，也就是说同一个时间只能处理一个任务。为了协调事件、用户交互、脚本、UI 渲染和网络处理等行为，防止主线程的不阻塞，（事件循环）Event Loop的方案应用而生。</p>
+<p>JavaScript 处理任务是在等待任务、执行任务 、休眠等待新任务中不断循环中，也称这种机制为事件循环。</p>
 <ul>
-<li>使用Symbol.for会在系统中将Symbol登记</li>
-<li>使用symbol则不会登记</li>
+<li>主线程中的任务执行完后，才执行任务队列中的任务</li>
+<li>有新任务到来时会将其放入队列，采取先进先执行的策略执行队列中的任务</li>
+<li>比如多个 <code>setTimeout</code> 同时到时间了，就要依次执行</li>
 </ul>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd<span class="token operator">=</span>Symbol<span class="token punctuation">.</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token string">'hdtmk8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> edu<span class="token operator">=</span>symbol<span class="token punctuation">.</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hd <span class="token operator">==</span> edu<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true 如果hd和edu是Symbol定义的则结果为false</span></code></pre>
-<h4 id="Symbol-keyFor"><a href="#Symbol-keyFor" class="headerlink" title="Symbol.keyFor"></a>Symbol.keyFor</h4><p><code>Symbol.keyFor</code>根据使用<code>Symbol.for</code>登记的<code>Symbol</code>返回描述，如果找不到返回undefined:</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> hd<span class="token operator">=</span>Symbol<span class="token punctuation">.</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token string">"mdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Symbol<span class="token punctuation">.</span><span class="token function">keyFor</span><span class="token punctuation">(</span>hd<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//mdtmk8</span>
+<p>任务包括 script(整体代码)、 setTimeout、setInterval、DOM渲染、DOM事件、Promise、XMLHTTPREQUEST等</p>
+<h3 id="原理分析"><a href="#原理分析" class="headerlink" title="原理分析"></a>原理分析</h3><p>下面通过一个例子来详细分析宏任务与微任务</p>
+<pre class=" language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"alex"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"定时器"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"promise1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"promise2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"hdtmk.com"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">let</span> edu<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"mdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Symbol<span class="token punctuation">.</span><span class="token function">keyFor</span><span class="token punctuation">(</span>edu<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//undefined</span>
+#输出结果为
+alex
+hdtmk<span class="token punctuation">.</span>com
+promise1
+promise2
+定时器</code></pre>
+<ol>
+<li><p>先执最前面的宏任务 script，然后输出</p>
+<pre class=" language-text"><code class="language-text">script start</code></pre>
+</li>
+<li><p>然后执行到setTimeout 异步宏任务，并将其放入宏任务队列，等待执行</p>
+</li>
+<li><p>之后执行到 Promise.then 微任务，并将其放入微任务队列，等待执行</p>
+</li>
+<li><p>然后执行到主代码输出</p>
+<pre class=" language-text"><code class="language-text">script end</code></pre>
+</li>
+<li><p>主线程所有任务处理完成</p>
+</li>
+<li><p>通过事件循环遍历微任务队列，将刚才放入的Promise.then微任务读取到主线程执行，然后输出</p>
+<pre class=" language-text"><code class="language-text">promise1</code></pre>
+</li>
+<li><p>之后又执行 promse.then 产生新的微任务，并放入微任务队列</p>
+</li>
+<li><p>主线程任务执行完毕</p>
+</li>
+<li><p>现次事件循环遍历微任务队列，读取到promise2微任务放入主线程执行，然后输出</p>
+<pre class=" language-text"><code class="language-text">promise2</code></pre>
+</li>
+<li><p>主线程任务执行完毕</p>
+</li>
+<li><p>此时微任务队列已经无任务，然后从宏任务队列中读取到 setTimeout任务并加入主线程，然后输出</p>
+</li>
+</ol>
+<h3 id="脚本加载"><a href="#脚本加载" class="headerlink" title="脚本加载"></a>脚本加载</h3><p>引擎在执行任务时不会进行DOM渲染，所以如果把<code>script</code> 定义在前面，要先执行完任务后再渲染DOM，建议将<code>script</code> 放在 BODY 结束标签前。</p>
+<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><p>定时器会放入异步任务队列，也需要等待同步任务执行完成后执行。</p>
+<p>下面设置了 6 毫秒执行，如果主线程代码执行10毫秒，定时器要等主线程执行完才执行。定时器是先计时，计时完毕之后，才会把定时器里面的任务放入到宏任务队列。</p>
+<p>HTML标准规定最小时间不能低于4毫秒，有些异步操作如DOM操作最低是16毫秒，总之把时间设置大些对性能更好。</p>
+<pre class=" language-text"><code class="language-text">setTimeout(func,6);</code></pre>
+<p>下面的代码会先输出 <code>hdtmdk.com</code> 之后输出 <code>alex</code></p>
+<pre class=" language-text"><code class="language-text">setTimeout(() => {
+  console.log("alex");
+}, 0);
+console.log("hdtmk.com");</code></pre>
+<blockquote>
+<p>这是对定时器的说明，其他的异步操作如事件、XMLHTTPREQUEST 等逻辑是一样的</p>
+</blockquote>
+<h3 id="微任务"><a href="#微任务" class="headerlink" title="微任务"></a>微任务</h3><p>微任务一般由用户代码产生，微任务较宏任务执行优先级更高，<code>Promise.then</code> 是典型的微任务，实例化 Promise 时执行的代码是同步的，便then注册的回调函数是异步微任务的。</p>
+<p>任务的执行顺序是同步任务、微任务、宏任务所以下面执行结果是 <code>1、2、3、4</code></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span>resolve <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//都是同步任务时，注意顺序</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>_ <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>我们再来看下面稍复杂的任务代码</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"定时器"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"timeout timeout"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span>resolve <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"settimeout Promise"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"settimeout then"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//定时器</span>
+<span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span>resolve <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Promise"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"then"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"alex"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="对象属性"><a href="#对象属性" class="headerlink" title="对象属性"></a>对象属性</h4><p>Symbol是独一无二的所以可以保证对象属性的唯一。</p>
-<ul>
-<li>Symbol声明和访问使用<code>[]</code>(变量)形式操作</li>
-<li>也不能使用<code>.</code>语法 因为<code>.</code>语法是操作字符串属性的。</li>
-</ul>
-<p>下面写法是错误的，会将<code>symbol</code>当成字符串<code>symbol</code>处理：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> symbol<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> obj<span class="token operator">=</span><span class="token punctuation">{</span>
-    symbol<span class="token punctuation">:</span><span class="token string">"alex"</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//{symbol: "alex"}</span></code></pre>
-<p>正确写法是以<code>[]</code>变量形式声明和访问：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> symbol<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> obj<span class="token operator">=</span><span class="token punctuation">{</span>
-    <span class="token punctuation">[</span>symbol<span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token string">"alex"</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>symbol<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// alex</span></code></pre>
-<h3 id="实例操作"><a href="#实例操作" class="headerlink" title="实例操作"></a>实例操作</h3><hr>
-<h4 id="缓存操作"><a href="#缓存操作" class="headerlink" title="缓存操作"></a>缓存操作</h4><p>使用<code>symbol</code>可以解决在保存数据时由于名称相同造成耦合覆盖问题：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Cache</span> <span class="token punctuation">{</span>
-  <span class="token keyword">static</span> data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">static</span> <span class="token keyword">set</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+<p>以上代码执行结果为</p>
+<pre class=" language-text"><code class="language-text">Promise
+alex
+then
+定时器
+settimeout Promise
+settimeout then
+timeout timeout</code></pre>
+<h2 id="实例操作"><a href="#实例操作" class="headerlink" title="实例操作"></a>实例操作</h2><hr>
+<h3 id="进度条"><a href="#进度条" class="headerlink" title="进度条"></a>进度条</h3><p>下面的定时器虽然都定时了一秒钟，但也是按先进行出原则，依次执行</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//先自增再计算 1</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//2</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//先计算再自增 0</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>下面是一个进度条的示例，将每个数字放在一个任务中执行</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>body<span class="token operator">></span>
+  <span class="token operator">&lt;</span>style<span class="token operator">></span>
+    body <span class="token punctuation">{</span>
+      padding<span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    #hd <span class="token punctuation">{</span>
+      height<span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+      background<span class="token punctuation">:</span> yellowgreen<span class="token punctuation">;</span>
+      width<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      text<span class="token operator">-</span>align<span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+      font<span class="token operator">-</span>weight<span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"hd"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+  <span class="token keyword">function</span> <span class="token function">view</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">handle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      hd<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">;</span>
+      hd<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token operator">++</span> <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span>handle<span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-  <span class="token keyword">static</span> <span class="token keyword">get</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token function">view</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"定时器开始了..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+<h3 id="任务分解"><a href="#任务分解" class="headerlink" title="任务分解"></a>任务分解</h3><p>一个比较耗时的任务可能造成游览器卡死现象，所以可以将任务拆分为多小小异步小任务执行。下面是一个数字统计的函数，我们会发现运行时间特别长</p>
+<pre class=" language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">"runtime"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">hd</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> num<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    count <span class="token operator">+</span><span class="token operator">=</span> i<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">"runtime"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> num<span class="token operator">=</span><span class="token number">987654321</span><span class="token punctuation">;</span>
+<span class="token function">hd</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"hdtmk.com"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//需要等待上面执行完才会执行</span></code></pre>
+<p>现在把任务分解成小块放入任务队列，游览器就不会出现卡死的现象了，也不会影响后续代码的执行</p>
+<pre class=" language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">"runtime"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> num <span class="token operator">=</span> <span class="token number">987654321</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">hd</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100000000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+    count <span class="token operator">+</span><span class="token operator">=</span> num<span class="token operator">--</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span>hd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
+<span class="token function">hd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"hdtmk.com"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//立刻显示出来</span></code></pre>
+<p>交给微任务处理是更好的选择</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">hd</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>_ <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> num<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      count <span class="token operator">+</span><span class="token operator">=</span> num<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">hd</span><span class="token punctuation">(</span><span class="token number">987654321</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"alex"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 
-<span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">"hdtmk8"</span><span class="token punctuation">,</span>
-  key<span class="token punctuation">:</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"缓存"</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">let</span> cart <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">"购物车"</span><span class="token punctuation">,</span>
-  key<span class="token punctuation">:</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"购物车"</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-Cache<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>key<span class="token punctuation">,</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
-Cache<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>cart<span class="token punctuation">.</span>key<span class="token punctuation">,</span> cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Cache<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h4 id="遍历属性"><a href="#遍历属性" class="headerlink" title="遍历属性"></a>遍历属性</h4><p><code>Symbol</code>不能使用<code>for/in</code>、<code>for/of</code>遍历操作：</p>
-<pre><code>let symbol=Symbol(&quot;hdtmk8&quot;);
-let obj={
-    name:&quot;alex&quot;;
-    [symbol]:&quot;make&quot;
-};
-
-for(const key in obj){
-    console.log(key); //name symbol类型的遍历不到
-}
-
-for(const key of Object.key(obj)){
-    console.log(key); //name
-}</code></pre>
-<p>可以使用<code>Object.getOwnPropertySymbols</code>获取所有<code>symbol</code>属性：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> symbol<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> obj<span class="token operator">=</span><span class="token punctuation">{</span>
-    name<span class="token punctuation">:</span><span class="token string">"alex"</span><span class="token punctuation">,</span>
-    <span class="token punctuation">[</span>symbol<span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token string">"make"</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">const</span> key <span class="token keyword">of</span> Object<span class="token punctuation">.</span><span class="token function">getOwnpropertySymbol</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>也可以使用<code>Reflect.ownKeys(obj)</code>获取所有属性包括<code>Symbol</code>：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> symbol<span class="token operator">=</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">"hdtmk8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> obj<span class="token operator">=</span><span class="token punctuation">{</span>
-    name<span class="token punctuation">:</span><span class="token string">"alex"</span><span class="token punctuation">,</span>
-    <span class="token punctuation">[</span>symbol<span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token string">"make"</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> key <span class="token keyword">of</span> Reflect<span class="token punctuation">.</span><span class="token function">ownKeys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
-<span class="token punctuation">}</span></code></pre>
-<h5 id="如果对象属性不想被遍历，可以使用Symbol类型保护。"><a href="#如果对象属性不想被遍历，可以使用Symbol类型保护。" class="headerlink" title="如果对象属性不想被遍历，可以使用Symbol类型保护。"></a>如果对象属性不想被遍历，可以使用<code>Symbol</code>类型保护。</h5>
             </div>
             <hr/>
 
@@ -636,7 +735,7 @@ for(const key of Object.key(obj)){
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://hdtmk8.github.io/2020/08/01/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8BSymbol%E7%B1%BB%E5%9E%8B/">http://hdtmk8.github.io/2020/08/01/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8BSymbol%E7%B1%BB%E5%9E%8B/</a>
+                    <a href="http://hdtmk8.github.io/2020/08/13/JavaScript-%E5%AE%8F%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%BE%AE%E4%BB%BB%E5%8A%A1/">http://hdtmk8.github.io/2020/08/13/JavaScript-%E5%AE%8F%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%BE%AE%E4%BB%BB%E5%8A%A1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -678,8 +777,12 @@ for(const key of Object.key(obj)){
                                     <span class="chip bg-color">Js</span>
                                 </a>
                             
-                                <a href="/tags/Symbol/">
-                                    <span class="chip bg-color">Symbol</span>
+                                <a href="/tags/%E5%AE%8F%E4%BB%BB%E5%8A%A1/">
+                                    <span class="chip bg-color">宏任务</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%BE%AE%E4%BB%BB%E5%8A%A1/">
+                                    <span class="chip bg-color">微任务</span>
                                 </a>
                             
                         </div>
@@ -893,39 +996,35 @@ for(const key of Object.key(obj)){
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/08/01/JavaScript-Set%E4%B8%8EWeakSet%E7%B1%BB%E5%9E%8B/">
+                <a href="/2020/08/13/JavaScript-%E5%AE%8F%E4%BB%BB%E5%8A%A1%E4%B8%8E%E5%BE%AE%E4%BB%BB%E5%8A%A1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JavaScript Set与WeakSet类型">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="JavaScript 宏任务与微任务">
                         
-                        <span class="card-title">JavaScript Set与WeakSet类型</span>
+                        <span class="card-title">JavaScript 宏任务与微任务</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Set与WeakSet
-hdtmk8 @hdtmk8
+                            JavaScript 宏任务与微任务
 
-Set用于存储任何类型的唯一值，无论是基本类型还是对象引用。
+hdttmk8@hdttmk8
 
-只能保存值没有键名
-严格类型检测，如字符串数字不等于数值型数字
-值是唯一的
-遍历顺序是添加的顺序，方便保存回调函数
-
-基
+任务管理
+JavaScript 语言的一大特点就是单线程，也就是说同一个时间只能处理一个任务。为了协调事件、用户交互、脚本、UI 渲染和网络处理等行为，防止主线程的不
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -938,6 +1037,7 @@ Set用于存储任何类型的唯一值，无论是基本类型还是对象引�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -945,12 +1045,12 @@ Set用于存储任何类型的唯一值，无论是基本类型还是对象引�
                         <span class="chip bg-color">Js</span>
                     </a>
                     
-                    <a href="/tags/Set/">
-                        <span class="chip bg-color">Set</span>
+                    <a href="/tags/%E5%AE%8F%E4%BB%BB%E5%8A%A1/">
+                        <span class="chip bg-color">宏任务</span>
                     </a>
                     
-                    <a href="/tags/WeakSet/">
-                        <span class="chip bg-color">WeakSet</span>
+                    <a href="/tags/%E5%BE%AE%E4%BB%BB%E5%8A%A1/">
+                        <span class="chip bg-color">微任务</span>
                     </a>
                     
                 </div>
@@ -964,30 +1064,28 @@ Set用于存储任何类型的唯一值，无论是基本类型还是对象引�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/31/JavaScript%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E4%B9%8B%E6%95%B0%E7%BB%84/">
+                <a href="/2020/08/11/JavaScript-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E4%B8%8EPromise/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="JavaScript引用类型之数组">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="JavaScript 异步编程与Promise">
                         
-                        <span class="card-title">JavaScript引用类型之数组</span>
+                        <span class="card-title">JavaScript 异步编程与Promise</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JavaScript 数组
-hdtmk8.github.io  @hdtmk8  
+                            JavaScript 异步编程与Promise
 
-数组是多个变量值的集合，数组是Array对象的实例，所以可以像对象一样调用方法。 
-创建数组
-使用对象方式创建数组：
-console.log(new Ar
+hdttmk8@hdttmk8
+
+JavaScript 中存在很多异步操作,Promise 将异步操作队列化，按照期望的顺序执行，返回符合预期的结果。可以通过链式调用多个 Promise 达
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
                             </span>
                         <span class="publish-author">
                             
@@ -1008,8 +1106,12 @@ console.log(new Ar
                         <span class="chip bg-color">Js</span>
                     </a>
                     
-                    <a href="/tags/Array/">
-                        <span class="chip bg-color">Array</span>
+                    <a href="/tags/%E5%BC%82%E6%AD%A5/">
+                        <span class="chip bg-color">异步</span>
+                    </a>
+                    
+                    <a href="/tags/Promise/">
+                        <span class="chip bg-color">Promise</span>
                     </a>
                     
                 </div>
